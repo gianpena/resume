@@ -1,0 +1,204 @@
+% Resume of Gian Peña
+
+\documentclass[letterpaper,9pt]{article} % Changed font size to 9pt
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+\addtolength{\textwidth}{1.5in}
+\addtolength{\topmargin}{-.75in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% Custom commands
+\providecommand{\myemail}{[REDACTED]}
+\providecommand{\myphone}{[REDACTED]}
+\providecommand{\mylinkedin}{[REDACTED]}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Gian Marco Peña} \\ \vspace{1pt}
+    \small \faPhone\ \myphone $|$ \faEnvelope\ \myemail $|$
+    \faLinkedin\ \mylinkedin
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\vspace{5pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Florida International University}{August 2023 -- December 2026}
+      {B.S. Computer Science}{Miami, FL}
+      \resumeItemListStart
+        \resumeItem{\textbf{Relevant coursework}: Data Structures, Computer Architecture, Systems Programming}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\vspace{5pt}
+  \resumeSubHeadingListStart
+		\resumeSubheading
+	{Capital One}{June 2025 -- August 2025}
+	{Software Engineering Intern}{Chicago, IL}
+	\resumeItemListStart
+		\resumeItem{Developed device management feature for one of Capital One's customer-facing mobile applications, enabling \textbf{2000}+ members to view active sessions, selectively sign out of devices, and manage account security across platforms.}
+		\resumeItem{Built using \textbf{React Native} for mobile, \textbf{React} for web, \textbf{NestJS} backend, and \textbf{MySQL} database with \textbf{Knex.js} for data interactions.}
+		\resumeItem{Wrote comprehensive unit tests using \textbf{Jest} across frontend and backend to ensure feature reliability before production release.}
+	\resumeItemListEnd
+    \resumeSubheading
+      {Capital One}{June 2024 -- August 2024}
+      {Software Engineering Intern}{McLean, VA}
+      \resumeItemListStart
+        \resumeItem{Developed software in the Capital One case management platform \textbf{Ease for Associates} to more efficiently organize the load of cases worked by all teams in order to evenly divide cases between over \textbf{1000} teams.}
+        \resumeItem{Used \textbf{AngularJS} and \textbf{NgRx} to develop a seamless user interface by creating a platform for associates to work on cases not necessarily under their team's purview, enabling them to take the initiative on working cases.}
+        \resumeItem{Wrote unit tests using \textbf{Jest} to ensure rigor in the feature's functionality, verifying that associates without the necessary privileges could not access the feature before it is available to all associates.}
+      \resumeItemListEnd
+      
+    % \resumeSubheading
+    %   {Doral Academy Programming Team}{December 2018 -- June 2023}
+    %   {Team Member}{Doral, FL}
+    %   \resumeItemListStart
+    %     \resumeItem{Competed for Doral Academy's programming team, gaining proficiency in data structures, algorithms, and problem-solving techniques. These techniques were applied under pressure. Languages used at competitions include \textbf{C++}, \textbf{Python3}, \textbf{Java}.}
+    %     	\resumeItemListStart
+	  %          \resumeItem{\textbf{1st place} UF HSPC 2023 (out of approx. 30 teams)}
+    %             \resumeItem{\textbf{1st place} FIU HSPC 2023 (advanced division, out of 6 teams)}
+    %             \resumeItem{\textbf{2nd place} UCF 37th annual HSPT (out of 74 teams)}
+		% \resumeItemListEnd
+    %     \vspace{0.15cm}
+    % \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Leadership}
+\vspace{5pt}
+    \resumeSubHeadingListStart
+        \resumeSubheading{Reach Program Manager}{January 2024 -- December 2025}{INIT FIU}{Miami, FL}
+        \resumeItemListStart
+            \resumeItem{Spearheaded technical interview preparation workshops focused on data structures and algorithms, providing students with guidance to excel in their technical interviews.}
+            \resumeItem{Developed comprehensive solutions to technical interview problems in \textbf{C++}, \textbf{Java}, and \textbf{Python3}, ensuring accessibility to the discussion of their solutions for a diverse range of students.}
+            \resumeItem{Collaborated with authoritative figures within INIT to organize and facilitate these workshops.}
+        \resumeItemListEnd
+        \resumeSubheading{High School Programming Competition Technical Lead}{February 2024 -- February 2026}{FIU Programming Team}{Miami, FL}
+        \resumeItemListStart
+            \resumeItem{Operated jointly with technical co-leads on the coordination and execution of our annual high school programming competition, overseeing aspects from initial planning to post-event evaluation.}
+            \resumeItem{Automated the generation of large-scale test data sets using \textbf{Bash} and \textbf{Python3}, creating a robust pipeline to validate problem constraints and emulate the judging process.}
+            \resumeItem{Configured the contest environment, including setting up and customizing DOMJudge, and authored a diverse set of problem statements to challenge participants’ skills across multiple domains.}
+        \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+		  \resumeProjectHeading
+          {\textbf{FIUJudge} $|$ Contest Environment $|$ Hybrid}{June 2025 -- Present}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using \textbf{React} and \textbf{Express.js} with \textbf{SQLite} database to host high school programming contests for \textbf{30+} teams, replacing the existing judging platform for university-sponsored competitions}
+            \resumeItem{Implemented comprehensive contest features including real-time scoreboards, submission judging, clarification systems, contest announcements, and administrative oversight tools}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{BedStats} $|$ Discord Bot $|$ Remote}{June 2020 -- Present}
+          \resumeItemListStart
+            \resumeItem{Leveraged \textbf{Node.js}, Discord’s API and other \textbf{RESTful API} technologies to create a robust and scalable Discord bot, empowering users to access comprehensive Bedwars data within their own profiles or those of other players from the Hypixel Minecraft server.}
+            \resumeItem{Successfully deployed the bot to approximately \textbf{5000} Discord servers, benefiting a diverse user base and fostering engagement within the gaming community.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{HappenIn} $|$ Event Discovery Platform $|$ KnightHacks}{October 2025}
+          \resumeItemListStart
+            \resumeItem{Created a mobile-friendly website inspired by Tinder, enabling users to discover local events and activities, and connect with others who share mutual interests.}
+            \resumeItem{Designed the frontend using \textbf{React} for a seamless, responsive user experience.}
+            \resumeItem{Engineered a backend split into two services: a \textbf{RESTful API} built with \textbf{Express.js} (Node.js) for core data operations, and a WebSocket server server for real-time chat using the \textbf{ws} npm package for activity-based group messaging.}
+            \resumeItem{Utilized \textbf{SQLite} to efficiently store and retrieve chat messages, ensuring reliable persistence and fast access for real-time conversations.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+\section{Technical Skills}
+\vspace{5pt}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, C++, Python3, Java, \LaTeX, Bash, Zsh, SQLite, MySQL} \\
+     \textbf{Frameworks}{: Node.js, Express.js, React, React Native, Jest}
+    }}
+ \end{itemize}
+
+\end{document}

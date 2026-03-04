@@ -11,9 +11,9 @@
 #set par(leading: 0.4em)
 
 // ── Contact info ─────────────────────────────────────────────────────────────
-#let my-email   = "[REDACTED]"
-#let my-phone   = "[REDACTED]"
-#let my-linkedin = "[REDACTED]"
+#let my-email   = sys.inputs.at("EMAIL", default: "[REDACTED]")
+#let my-phone   = sys.inputs.at("PHONE_NUMBER", default: "[REDACTED]")
+#let my-linkedin = sys.inputs.at("LINKEDIN", default: "[REDACTED]")
 
 // ============================================================
 // UI FUNCTIONS

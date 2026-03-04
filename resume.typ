@@ -69,7 +69,7 @@
 #let items(..bullets) = {
   set text(size: 8.5pt)
   set list(indent: 1em, body-indent: 0.4em, spacing: 4pt)
-  list(..bullets.pos().map(b => b))
+  pad(top: -2pt)[#list(..bullets.pos().map(b => b))]
   // v(-2pt)
 }
 

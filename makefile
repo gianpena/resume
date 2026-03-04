@@ -3,15 +3,8 @@ include .env
 all: unredacted.pdf resume.pdf
 	@echo "PDFs generated."
 
-unredacted.pdf: resume.tex
-	pdflatex -jobname=unredacted '\def\myemail{\href{mailto:$(EMAIL)}{$(EMAIL) }}\def\myphone{$(PHONE_NUMBER) }\def\mylinkedin{\href{$(LINKEDIN)}{$(LINKEDIN)}}\input{resume.tex}'
-	make clean
+unredacted.pdf: resume.typ
+	typst compile --input EMAIL="$(EMAIL)" --input PHONE_NUMBER="$(PHONE_NUMBER)" --input LINKEDIN="$(LINKEDIN)" resume.typ unredacted.pdf
 
-resume.pdf: resume.tex
-	pdflatex resume.tex
-	make clean
-
-clean:
-	rm -f *.aux *.dvi *.log *.out
-
-.PHONY: clean
+resume.pdf: resume.typ
+	typst compile resume.typ resume.pdf

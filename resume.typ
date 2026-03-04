@@ -5,7 +5,7 @@
 // ── Page setup ──────────────────────────────────────────────────────────────
 #set page(
   paper: "us-letter",
-  margin: (x: 0.5in, y: 0.3in),
+  margin: (x: 0.5in, y: 0.2in),
 )
 #set text(size: 9pt)
 #set par(leading: 0.4em)
@@ -130,6 +130,16 @@
 
 #section("Leadership")
 #v(3pt)
+
+#subheading(
+  "Director of Technology", "January 2026 - Present",
+  "INIT FIU", "Miami, FL"
+)
+#items(
+  [Directed development and deployment of a Python-based Discord bot using *discord.py* and *MySQL*, deployed with *Docker* to automate administrative workflows and deliver timely reminders across the organization's Discord server],
+  [Automated key components of the admissions pipeline for ShellHacks, INIT FIU's annual hackathon serving over *1400* participants, reducing manual overhead for organizers through custom bot integrations],
+  [Maintained and scaled Discord infrastructure for a *700+* member server, building tooling to streamline community operations and support one of FIU's largest student technology organizations]
+)
 
 #subheading(
   "Reach Program Manager",

@@ -189,6 +189,6 @@
 #section("Technical Skills")
 
 #pad(top:-4pt)[
-  #text(size:8.5pt)[- *Languages*: JavaScript, C++, Python3, Java, LaTeX, Bash, Zsh, SQLite, MySQL
+  #text(size:8.5pt)[- *Languages*: JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
 - *Frameworks*: Node.js, Express.js, React, React Native, Jest]
 ]

@@ -5,9 +5,9 @@
 // ── Page setup ──────────────────────────────────────────────────────────────
 #set page(
   paper: "us-letter",
-  margin: (x: 0.5in, y: 0.1in),
+  margin: (x: 0.5in, y: 0.3in),
 )
-#set text(font: "New Computer Modern", size: 9pt)
+#set text(size: 9pt)
 #set par(leading: 0.4em)
 
 // ── Contact info ─────────────────────────────────────────────────────────────
@@ -76,12 +76,13 @@
 // ============================================================
 // HEADER
 // ============================================================
+#import "@preview/fontawesome:0.5.0": *
 #align(center)[
   #text(size: 18pt, weight: "bold")[#smallcaps[Gian Marco Peña]] \
   #text(size: 8.5pt)[
-    #my-phone #h(6pt) | #h(6pt)
-    #my-email #h(6pt) | #h(6pt)
-    #my-linkedin
+    #fa-icon("phone") #my-phone #h(6pt) | #h(6pt)
+    #fa-icon("envelope") #my-email #h(6pt) | #h(6pt)
+    #fa-icon("linkedin") #link(my-linkedin)[#my-linkedin]
   ]
 ]
 

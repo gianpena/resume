@@ -7,7 +7,7 @@
   paper: "us-letter",
   margin: (x: 0.5in, y: 0.2in),
 )
-#set text(size: 9pt)
+#set text(size: 10pt)
 #set par(leading: 0.4em)
 
 // ── Contact info ─────────────────────────────────────────────────────────────
@@ -22,7 +22,7 @@
 /// Section header with small-caps label and a full-width rule below.
 #let section(title) = {
   
-  text(size: 11pt, weight: "bold")[#smallcaps(title)]
+  text(size: 12pt, weight: "bold")[#smallcaps(title)]
   v(-10pt)
   line(length: 100%, stroke: 0.6pt)
 }
@@ -33,17 +33,17 @@
 #let subheading(org, date, role, loc) = {
   pad(top: -6pt)[
     #block(width: 100%)[
-      #text(weight: "bold")[#org]
+      #text(weight: "bold", size: 10pt)[#org]
       #h(1fr)
-      #text[#date]
+      #text(size: 10pt)[#date]
     ]
   ]
   
   pad(top: -6pt, bottom: -4pt)[
     #block(width: 100%)[
-      #text(style: "italic", size: 8.5pt)[#role]
+      #text(style: "italic", size: 9pt)[#role]
       #h(1fr)
-      #text(style: "italic", size: 8.5pt)[#loc]
+      #text(style: "italic", size: 9pt)[#loc]
     ]
   ]
 
@@ -67,10 +67,10 @@
 
 /// Bulleted list of resume items with consistent small size & spacing.
 #let items(..bullets) = {
-  set text(size: 8.5pt)
+  // set text(size: 8.5pt)
   set list(indent: 1em, body-indent: 0.4em, spacing: 4pt)
   pad(top: -2pt)[#list(..bullets.pos().map(b => b))]
-  // v(-2pt)
+  v(-3pt)
 }
 
 // ============================================================
@@ -91,7 +91,6 @@
 // ============================================================
 
 #section("Education")
-#v(3pt)
 
 #subheading(
   "Florida International University",
@@ -108,7 +107,6 @@
 // ============================================================
 
 #section("Experience")
-#v(3pt)
 
 #subheading("Capital One", "June 2025 – August 2025", "Software Engineering Intern", "Chicago, IL")
 #items(
@@ -129,17 +127,6 @@
 // ============================================================
 
 #section("Leadership")
-#v(3pt)
-
-#subheading(
-  "Director of Technology", "January 2026 - Present",
-  "INIT FIU", "Miami, FL"
-)
-#items(
-  [Directed development and deployment of a Python-based Discord bot using *discord.py* and *MySQL*, deployed with *Docker* to automate administrative workflows and deliver timely reminders across the organization's Discord server],
-  [Automated key components of the admissions pipeline for ShellHacks, INIT FIU's annual hackathon serving over *1400* participants, reducing manual overhead for organizers through custom bot integrations],
-  [Maintained and scaled Discord infrastructure for a *700+* member server, building tooling to streamline community operations and support one of FIU's largest student technology organizations]
-)
 
 #subheading(
   "Reach Program Manager",
@@ -170,7 +157,6 @@
 // ============================================================
 
 #section("Projects")
-#v(3pt)
 
 #project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")
 #items(
@@ -199,7 +185,7 @@
 #section("Technical Skills")
 
 #pad(top:-4pt)[
-  #text(size:8.5pt)[- *Languages*: JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
-- *Libraries/Frameworks*: Node.js, Express.js, Next.js, React Native, Jest
+  #text[- *Languages*: JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
+- *Frameworks*: Node.js, Express.js, Next.js, React, React Native, Jest
 - *Tools*: Git, Docker, Postman, Insomnia, AWS]
 ]

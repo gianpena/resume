@@ -21,10 +21,13 @@
 
 /// Section header with small-caps label and a full-width rule below.
 #let section(title) = {
-  
-  text(size: 12pt, weight: "bold")[#smallcaps(title)]
-  v(-10pt)
-  line(length: 100%, stroke: 0.6pt)
+  pad(top: -2pt)[
+    #{
+      text(size: 12pt, weight: "bold")[#smallcaps(title)]
+      v(-10pt)
+      line(length: 100%, stroke: 0.6pt)
+    }
+  ]
 }
 
 /// Two-line subheading: bold title + date on the first row,
@@ -70,7 +73,7 @@
   // set text(size: 8.5pt)
   set list(indent: 1em, body-indent: 0.4em, spacing: 4pt)
   pad(top: -2pt)[#list(..bullets.pos().map(b => b))]
-  v(-3pt)
+  v(-1pt)
 }
 
 // ============================================================
@@ -129,15 +132,13 @@
 #section("Leadership")
 
 #subheading(
-  "Reach Program Manager",
-  "January 2024 – December 2025",
-  "INIT FIU",
-  "Miami, FL",
+  "Director of Technology", "January 2026 - Present",
+  "INIT FIU", "Miami, FL"
 )
 #items(
-  [Spearheaded technical interview preparation workshops focused on data structures and algorithms, providing students with guidance to excel in their technical interviews.],
-  [Developed comprehensive solutions to technical interview problems in *C++*, *Java*, and *Python3*, ensuring accessibility to the discussion of their solutions for a diverse range of students.],
-  [Collaborated with authoritative figures within INIT to organize and facilitate these workshops.],
+  [Directed development and deployment of a Python-based Discord bot using *discord.py* and *MySQL*, deployed with *Docker* to automate administrative workflows and deliver timely reminders across the organization's Discord server],
+  [Automated key components of the admissions pipeline for ShellHacks, INIT FIU's annual hackathon serving over *1400* participants, reducing manual overhead for organizers through custom bot integrations],
+  [Maintained and scaled Discord infrastructure for a *700+* member server, building tooling to streamline community operations and support one of FIU's largest student technology organizations]
 )
 
 #subheading(

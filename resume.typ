@@ -200,6 +200,6 @@
 
 #pad(top:-4pt)[
   #text(size:8.5pt)[- *Languages*: JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
-- *Frameworks*: Node.js, Express.js, React, React Native, Jest
+- *Libraries/Frameworks*: Node.js, Express.js, Next.js, React Native, Jest
 - *Tools*: Git, Docker, Postman, Insomnia, AWS]
 ]

@@ -7,6 +7,7 @@ First you need to export some environment variables:
 - `PHONE_NUMBER`
 - `EMAIL`
 - `LINKEDIN`
+- `GITHUB`
 
 You will also need the fontawesome fonts. Sorry that I can't give more guidance here, it's a process that in my opinion is too lengthy for a README.
 

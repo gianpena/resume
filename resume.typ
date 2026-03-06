@@ -14,6 +14,7 @@
 #let my-email   = sys.inputs.at("EMAIL", default: "[REDACTED]")
 #let my-phone   = sys.inputs.at("PHONE_NUMBER", default: "[REDACTED]")
 #let my-linkedin = sys.inputs.at("LINKEDIN", default: "[REDACTED]")
+#let my-github = sys.inputs.at("GITHUB", default: "[REDACTED]")
 
 // ============================================================
 // UI FUNCTIONS
@@ -85,7 +86,8 @@
   #text(size: 10pt)[
     #fa-icon("phone") #my-phone #h(6pt) | #h(6pt)
     #fa-icon("envelope") #my-email #h(6pt) | #h(6pt)
-    #fa-icon("linkedin") #link(my-linkedin)[#my-linkedin]
+    #fa-icon("linkedin") #link(my-linkedin)[#my-linkedin] #h(6pt) | #h(6pt)
+    #fa-icon("github") #link(my-github)[#my-github]
   ]
 ]
 

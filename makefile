@@ -8,3 +8,5 @@ unredacted.pdf: resume.typ
 
 resume.pdf: resume.typ
 	typst compile resume.typ resume.pdf
+
+.PHONY: all

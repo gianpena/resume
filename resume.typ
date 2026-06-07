@@ -13,8 +13,8 @@
 // ── Contact info ─────────────────────────────────────────────────────────────
 #let my-email   = sys.inputs.at("EMAIL", default: "[REDACTED]")
 #let my-phone   = sys.inputs.at("PHONE_NUMBER", default: "[REDACTED]")
-#let my-linkedin = sys.inputs.at("LINKEDIN", default: "[REDACTED]")
-#let my-github = sys.inputs.at("GITHUB", default: "[REDACTED]")
+#let my-linkedin = "https://linkedin.com/in/gian-pena"
+#let my-github = "https://github.com/gianpena"
 
 // ============================================================
 // UI FUNCTIONS

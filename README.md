@@ -6,8 +6,7 @@ For any tailoring to specific companies/postings, separate branches should be ma
 First you need to export some environment variables:
 - `PHONE_NUMBER`
 - `EMAIL`
-- `LINKEDIN`
-- `GITHUB`
+The GitHub and LinkedIn links are embedded directly into the PDF, there are no variables for them. You will have to modify these yourself.
 
 You will also need the fontawesome fonts. Sorry that I can't give more guidance here, it's a process that in my opinion is too lengthy for a README.
 

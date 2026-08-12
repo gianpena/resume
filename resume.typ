@@ -113,9 +113,16 @@
 
 #section("Experience")
 
+#subheading("Capital One", "June 2026 – August 2026", "Software Engineering Intern", "New York, NY")
+#items(
+  [Built a notification center for an internal case management platform used by *50+* fraud investigators, delivering alerts via in-app notifications as well as email and Slack through an internal API service.],
+  [Designed and implemented an *AWS Lambda* function to dispatch notifications, backed by a *Python* backend using *FastAPI* and a web UI built with *React*.],
+  [Implemented a range of personalisation options in the UI, enabling investigators to customize and track their alerts.],
+)
+
 #subheading("Capital One", "June 2025 – August 2025", "Software Engineering Intern", "Chicago, IL")
 #items(
-  [Developed device management feature for one of Capital One's customer-facing mobile applications, enabling *2000*+ members to view active sessions, selectively sign out of devices, and manage account security across platforms.],
+  [Developed device/session management for one of Capital One's concierge service applications, enabling *2000*+ members to view active sessions, selectively sign out of devices, and manage account security across platforms.],
   [Built using *React Native* for mobile, *React* for web, *NestJS* backend, and *MySQL* database with *Knex.js* for data interactions.],
   [Wrote comprehensive unit tests using *Jest* across frontend and backend to ensure feature reliability before production release.],
 )

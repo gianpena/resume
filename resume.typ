@@ -180,13 +180,13 @@
   [Successfully deployed the bot to approximately *5000* Discord servers, benefiting a diverse user base and fostering engagement within the gaming community.],
 )
 
-#project-heading("HappenIn", ("Event Discovery Platform", "KnightHacks"), "October 2025")
-#items(
-  [Created a mobile-friendly website inspired by Tinder, enabling users to discover local events and activities, and connect with others who share mutual interests.],
-  [Designed the frontend using *React* for a seamless, responsive user experience.],
-  [Engineered a backend split into two services: a *RESTful API* built with *Express.js* (Node.js) for core data operations, and a WebSocket server for real-time chat using the *ws* npm package for activity-based group messaging.],
-  [Utilized *SQLite* to efficiently store and retrieve chat messages, ensuring reliable persistence and fast access for real-time conversations.],
-)
+// #project-heading("HappenIn", ("Event Discovery Platform", "KnightHacks"), "October 2025")
+// #items(
+//   [Created a mobile-friendly website inspired by Tinder, enabling users to discover local events and activities, and connect with others who share mutual interests.],
+//   [Designed the frontend using *React* for a seamless, responsive user experience.],
+//   [Engineered a backend split into two services: a *RESTful API* built with *Express.js* (Node.js) for core data operations, and a WebSocket server for real-time chat using the *ws* npm package for activity-based group messaging.],
+//   [Utilized *SQLite* to efficiently store and retrieve chat messages, ensuring reliable persistence and fast access for real-time conversations.],
+// )
 
 // ============================================================
 // TECHNICAL SKILLS

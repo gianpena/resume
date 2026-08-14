@@ -188,7 +188,7 @@
 #section("Technical Skills")
 
 #pad(top:-4pt)[
-  #text[- *Languages*: JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
+  #text[- *Languages*: TypeScript, JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
 - *Libraries/Frameworks*: Node.js, Express.js, Next.js, React, React Native, Jest
 - *Tools*: Git, Docker, Postman, Insomnia, AWS]
 ]

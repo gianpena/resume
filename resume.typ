@@ -1,6 +1,7 @@
 // ===========================
 // Resume of Gian Marco Peña
 // ===========================
+#import "@preview/swank-tex:0.1.0": LaTeX
 
 // ── Page setup ──────────────────────────────────────────────────────────────
 #set page(
@@ -195,7 +196,7 @@
 #section("Technical Skills")
 
 #pad(top:-4pt)[
-  #text[- *Languages*: TypeScript, JavaScript, C++, Python3, Java, Typst, LaTeX, Bash, Zsh, SQLite, MySQL
+  #text[- *Languages*: TypeScript, JavaScript, C++, Python3, Java, Typst, #LaTeX, Bash, Zsh, SQLite, MySQL
 - *Libraries/Frameworks*: Node.js, Express.js, Next.js, React, React Native, Jest
 - *Tools*: Git, Docker, Postman, Insomnia, AWS]
 ]

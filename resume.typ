@@ -21,8 +21,10 @@
 // UI FUNCTIONS
 // ============================================================
 
-/// Section header with small-caps label and a full-width rule below.
-#let section(title) = {
+/// Section header with small-caps label and a full-width rule below,
+/// followed by the section's body content.
+///   #section("Experience")[ ... ]
+#let section(title, body) = {
   pad(top: -2pt)[
     #{
       text(size: 12pt, weight: "bold")[#smallcaps(title)]
@@ -30,12 +32,14 @@
       line(length: 100%, stroke: 0.6pt)
     }
   ]
+  body
 }
 
 /// Two-line subheading: bold title + date on the first row,
-/// italic subtitle + location on the second row.
-///   #subheading("Company", "Date", "Role", "City, ST")
-#let subheading(org, date, role, loc) = {
+/// italic subtitle + location on the second row,
+/// followed by the body content (e.g. an #items list).
+///   #subheading("Company", "Date", "Role", "City, ST")[ ... ]
+#let subheading(org, date, role, loc, body) = {
   pad(top: -6pt)[
     #block(width: 100%)[
       #text(weight: "bold", size: 10pt)[#org]
@@ -52,11 +56,13 @@
     ]
   ]
 
+  body
 }
 
-/// Project heading: bold name | tag | tag  ···  date
-///   #project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")
-#let project-heading(name, tags, date) = {
+/// Project heading: bold name | tag | tag  ···  date,
+/// followed by the body content (e.g. an #items list).
+///   #project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")[ ... ]
+#let project-heading(name, tags, date, body) = {
   pad(top: -6pt, bottom: -4pt)[
     #grid(
       columns: (1fr, auto),
@@ -68,6 +74,7 @@
     )
   ]
   // v(-2pt)
+  body
 }
 
 /// Bulleted list of resume items with consistent small size & spacing.
@@ -96,107 +103,116 @@
 // EDUCATION
 // ============================================================
 
-#section("Education")
-
-#subheading(
-  "Florida International University",
-  "August 2023 – May 2027",
-  "B.S. Computer Science",
-  "Miami, FL",
-)
-#items(
-  [*Relevant coursework*: Data Structures, Computer Architecture, Systems Programming, Software Engineering],
-)
+#section("Education")[
+  #subheading(
+    "Florida International University",
+    "August 2023 – May 2027",
+    "B.S. Computer Science",
+    "Miami, FL",
+  )[
+    #items(
+      [*Relevant coursework*: Data Structures, Computer Architecture, Systems Programming, Software Engineering],
+    )
+  ]
+]
 
 // ============================================================
 // EXPERIENCE
 // ============================================================
 
-#section("Experience")
+#section("Experience")[
+  #subheading("Capital One", "June 2026 – August 2026", "Software Engineering Intern", "New York, NY")[
+    #items(
+      [Built a notification center for an internal case management platform used by *50+* fraud investigators, delivering alerts via in-app notifications as well as email and Slack through an internal API service.],
+      [Designed and implemented an *AWS Lambda* function to dispatch notifications, backed by a *Python* backend using *FastAPI* and a web UI built with *React*.],
+      [Implemented a range of personalisation options in the UI, enabling investigators to customize and track their alerts.],
+    )
+  ]
 
-#subheading("Capital One", "June 2026 – August 2026", "Software Engineering Intern", "New York, NY")
-#items(
-  [Built a notification center for an internal case management platform used by *50+* fraud investigators, delivering alerts via in-app notifications as well as email and Slack through an internal API service.],
-  [Designed and implemented an *AWS Lambda* function to dispatch notifications, backed by a *Python* backend using *FastAPI* and a web UI built with *React*.],
-  [Implemented a range of personalisation options in the UI, enabling investigators to customize and track their alerts.],
-)
+  #subheading("Capital One", "June 2025 – August 2025", "Software Engineering Intern", "Chicago, IL")[
+    #items(
+      [Developed device/session management for one of Capital One's concierge service applications, enabling *2000*+ members to view active sessions, selectively sign out of devices, and manage account security across platforms.],
+      [Built using *React Native* for mobile, *React* for web, *NestJS* backend, and *MySQL* database with *Knex.js* for data interactions.],
+      [Wrote comprehensive unit tests using *Jest* across frontend and backend to ensure feature reliability before production release.],
+    )
+  ]
 
-#subheading("Capital One", "June 2025 – August 2025", "Software Engineering Intern", "Chicago, IL")
-#items(
-  [Developed device/session management for one of Capital One's concierge service applications, enabling *2000*+ members to view active sessions, selectively sign out of devices, and manage account security across platforms.],
-  [Built using *React Native* for mobile, *React* for web, *NestJS* backend, and *MySQL* database with *Knex.js* for data interactions.],
-  [Wrote comprehensive unit tests using *Jest* across frontend and backend to ensure feature reliability before production release.],
-)
-
-#subheading("Capital One", "June 2024 – August 2024", "Software Engineering Intern", "McLean, VA")
-#items(
-  [Developed software in the Capital One case management platform *Ease for Associates* to more efficiently organize the load of cases worked by all teams in order to evenly divide cases between over *1000* teams.],
-  [Used *AngularJS* and *NgRx* to develop a seamless user interface by creating a platform for associates to work on cases not necessarily under their team's purview, enabling them to take the initiative on working cases.],
-  [Wrote unit tests using *Jest* to ensure rigor in the feature's functionality, verifying that associates without the necessary privileges could not access the feature before it is available to all associates.],
-)
+  #subheading("Capital One", "June 2024 – August 2024", "Software Engineering Intern", "McLean, VA")[
+    #items(
+      [Developed software in the Capital One case management platform *Ease for Associates* to more efficiently organize the load of cases worked by all teams in order to evenly divide cases between over *1000* teams.],
+      [Used *AngularJS* and *NgRx* to develop a seamless user interface by creating a platform for associates to work on cases not necessarily under their team's purview, enabling them to take the initiative on working cases.],
+      [Wrote unit tests using *Jest* to ensure rigor in the feature's functionality, verifying that associates without the necessary privileges could not access the feature before it is available to all associates.],
+    )
+  ]
+]
 
 // ============================================================
 // LEADERSHIP
 // ============================================================
 
-#section("Leadership")
+#section("Leadership")[
+  #subheading(
+    "Director of Technology", "January 2026 - Present",
+    "INIT FIU", "Miami, FL"
+  )[
+    #items(
+      [Directed development and deployment of a Python-based Discord bot using *discord.py* and *MySQL*, deployed with *Docker* to automate administrative workflows and deliver timely reminders across the organization's Discord server],
+      [Automated key components of the admissions pipeline for ShellHacks, INIT FIU's annual hackathon serving over *1400* participants, reducing manual overhead for organizers through custom bot integrations],
+      [Maintained and scaled Discord infrastructure for a *700+* member server, building tooling to streamline community operations and support one of FIU's largest student technology organizations]
+    )
+  ]
 
-#subheading(
-  "Director of Technology", "January 2026 - Present",
-  "INIT FIU", "Miami, FL"
-)
-#items(
-  [Directed development and deployment of a Python-based Discord bot using *discord.py* and *MySQL*, deployed with *Docker* to automate administrative workflows and deliver timely reminders across the organization's Discord server],
-  [Automated key components of the admissions pipeline for ShellHacks, INIT FIU's annual hackathon serving over *1400* participants, reducing manual overhead for organizers through custom bot integrations],
-  [Maintained and scaled Discord infrastructure for a *700+* member server, building tooling to streamline community operations and support one of FIU's largest student technology organizations]
-)
-
-#subheading(
-  "High School Programming Competition Technical Lead",
-  "February 2024 – February 2026",
-  "FIU Programming Team",
-  "Miami, FL",
-)
-#items(
-  [Operated jointly with technical co-leads on the coordination and execution of our annual high school programming competition, overseeing aspects from initial planning to post-event evaluation.],
-  [Automated the generation of large-scale test data sets using *Bash* and *Python3*, creating a robust pipeline to validate problem constraints and emulate the judging process.],
-  [Configured the contest environment, including setting up and customizing DOMJudge, and authored a diverse set of problem statements to challenge participants' skills across multiple domains.],
-)
+  #subheading(
+    "High School Programming Competition Technical Lead",
+    "February 2024 – February 2026",
+    "FIU Programming Team",
+    "Miami, FL",
+  )[
+    #items(
+      [Operated jointly with technical co-leads on the coordination and execution of our annual high school programming competition, overseeing aspects from initial planning to post-event evaluation.],
+      [Automated the generation of large-scale test data sets using *Bash* and *Python3*, creating a robust pipeline to validate problem constraints and emulate the judging process.],
+      [Configured the contest environment, including setting up and customizing DOMJudge, and authored a diverse set of problem statements to challenge participants' skills across multiple domains.],
+    )
+  ]
+]
 
 // ============================================================
 // PROJECTS
 // ============================================================
 
-#section("Projects")
+#section("Projects")[
+  #project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")[
+    #items(
+      [Developed a full-stack web application using *React* and *Express.js* with *SQLite* database to host high school programming contests for *30+* teams, replacing the existing judging platform for university-sponsored competitions.],
+      [Implemented comprehensive contest features including real-time scoreboards, submission judging, clarification systems, contest announcements, and administrative oversight tools.],
+    )
+  ]
 
-#project-heading("FIUJudge", ("Contest Environment", "Hybrid"), "June 2025 – Present")
-#items(
-  [Developed a full-stack web application using *React* and *Express.js* with *SQLite* database to host high school programming contests for *30+* teams, replacing the existing judging platform for university-sponsored competitions.],
-  [Implemented comprehensive contest features including real-time scoreboards, submission judging, clarification systems, contest announcements, and administrative oversight tools.],
-)
+  #project-heading("BedStats", ("Discord Bot", "Remote"), "June 2020 – Present")[
+    #items(
+      [Leveraged *Node.js*, Discord's API and other *RESTful API* technologies to create a robust and scalable Discord bot, empowering users to access comprehensive Bedwars data within their own profiles or those of other players from the Hypixel Minecraft server.],
+      [Successfully deployed the bot to approximately *5000* Discord servers, benefiting a diverse user base and fostering engagement within the gaming community.],
+    )
+  ]
+]
 
-#project-heading("BedStats", ("Discord Bot", "Remote"), "June 2020 – Present")
-#items(
-  [Leveraged *Node.js*, Discord's API and other *RESTful API* technologies to create a robust and scalable Discord bot, empowering users to access comprehensive Bedwars data within their own profiles or those of other players from the Hypixel Minecraft server.],
-  [Successfully deployed the bot to approximately *5000* Discord servers, benefiting a diverse user base and fostering engagement within the gaming community.],
-)
-
-// #project-heading("HappenIn", ("Event Discovery Platform", "KnightHacks"), "October 2025")
-// #items(
-//   [Created a mobile-friendly website inspired by Tinder, enabling users to discover local events and activities, and connect with others who share mutual interests.],
-//   [Designed the frontend using *React* for a seamless, responsive user experience.],
-//   [Engineered a backend split into two services: a *RESTful API* built with *Express.js* (Node.js) for core data operations, and a WebSocket server for real-time chat using the *ws* npm package for activity-based group messaging.],
-//   [Utilized *SQLite* to efficiently store and retrieve chat messages, ensuring reliable persistence and fast access for real-time conversations.],
-// )
+// #project-heading("HappenIn", ("Event Discovery Platform", "KnightHacks"), "October 2025")[
+//   #items(
+//     [Created a mobile-friendly website inspired by Tinder, enabling users to discover local events and activities, and connect with others who share mutual interests.],
+//     [Designed the frontend using *React* for a seamless, responsive user experience.],
+//     [Engineered a backend split into two services: a *RESTful API* built with *Express.js* (Node.js) for core data operations, and a WebSocket server for real-time chat using the *ws* npm package for activity-based group messaging.],
+//     [Utilized *SQLite* to efficiently store and retrieve chat messages, ensuring reliable persistence and fast access for real-time conversations.],
+//   )
+// ]
 
 // ============================================================
 // TECHNICAL SKILLS
 // ============================================================
 
-#section("Technical Skills")
-
-#pad(top:-4pt)[
-  #text[- *Languages*: TypeScript, JavaScript, C++, Python3, Java, Typst, #LaTeX, Bash, Zsh, SQLite, MySQL
+#section("Technical Skills")[
+  #pad(top:-4pt)[
+    #text[- *Languages*: TypeScript, JavaScript, C++, Python3, Java, Typst, #LaTeX, Bash, Zsh, SQLite, MySQL
 - *Libraries/Frameworks*: Node.js, Express.js, Next.js, React, React Native, Jest
 - *Tools*: Git, Docker, Postman, Insomnia, AWS]
+  ]
 ]
